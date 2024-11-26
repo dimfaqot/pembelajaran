@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #1c1d21;
+    color:white;
+}
+
+.text_1{
+    color: #010517;
+}
+
+.text_2{
+    color: #191e45;
+}
+
+.text_3 {
+    color: #6173fc;
+}
+.text_4 {
+    color: #7585ff;
+}
+
+.text_danger{
+    color:#b80a8a;
+}
+.text_danger_light{
+    color:#ed9bd7;
+}
+
+
+.bg_1{
+    background-color: #010517;
+}
+
+.bg_2{
+    background-color: #191e45;
+
+}
+
+.bg_3 {
+    background-color: #6173fc;
+}
+.bg_4 {
+    background-color: #7585ff;
+}
+
+
+.btn_1{
+    background-color: #010517;
+}
+
+.btn_2{
+    background-color: #191e45;
+    border: none;
+    color: #6173fc;
+    padding: 5px 10px;
+}
+
+.btn_3 {
+    background-color: #6173fc;
+    border: none;
+    color:#010517;
+    padding: 5px 10px;
+    font-size: small;
+    font-weight: bold;
+}
+.btn_3:hover {
+    background-color: #010517;
+    border: none;
+    color:#6173fc;
+    padding: 5px 10px;
+    font-size: small;
+    font-weight: bold;
+}
+.btn_4 {
+    background-color: #7585ff;
+    border: none;
+    color:#010517;
+    padding: 5px 10px;
+    font-size: small;
+    font-weight: bold;
+}
+.btn_4:hover {
+    background-color: #010517;
+    border: none;
+    color:#7585ff;
+    padding: 5px 10px;
+    font-size: small;
+    font-weight: bold;
+}
+.btn_5 {
+    background-color: #a7b1f9;
+    border: none;
+    color:#051661;
+    padding: 5px 10px;
+    font-size: small;
+    font-weight: bold;
+}
+.btn_5:hover {
+    background-color: #051661;
+    border: none;
+    color:#a7b1f9;
+    padding: 5px 10px;
+    font-size: small;
+    font-weight: bold;
+}
+
+.link_1{
+    text-decoration: none;
+    font-size: 10px;
+    background-color: #010517;
+}
+
+.link_2{
+    text-decoration: none;
+    font-size: 10px;
+    background-color: #191e45;
+}
+
+.link_3 {
+    text-decoration: none;
+    font-size: 10px;
+    color: #010517;
+    padding: 5px 10px;
+    background-color: #6173fc;
+}
+.link_3:hover {
+    text-decoration: none;
+    font-size: 10px;
+    background-color: #010517;
+    padding: 5px 10px;
+    border: none;
+    color: #6173fc
+}
+.link_4 {
+    text-decoration: none;
+    font-size: 10px;
+    color: #010517;
+    padding: 5px 10px;
+    background-color: #7585ff;
+}
+.link_4:hover {
+    text-decoration: none;
+    font-size: 10px;
+    background-color: #010517;
+    padding: 5px 10px;
+    border: none;
+    color: #7585ff
+}
+.link_warning {
+    text-decoration: none;
+    font-size: 10px;
+    color: #ede19b;
+    padding: 5px 10px;
+    background-color: #b88d0a;
+}
+.link_warning:hover {
+    text-decoration: none;
+    font-size: 10px;
+    background-color: #926f05;
+    padding: 5px 10px;
+    border: none;
+    color: #f4eab5
+}
+.link_danger {
+    text-decoration: none;
+    font-size: 10px;
+    color: #ed9bd7;
+    padding: 5px 10px;
+    background-color: #b80a8a;
+}
+.link_danger:hover {
+    text-decoration: none;
+    font-size: 10px;
+    background-color: #93066d;
+    padding: 5px 10px;
+    border: none;
+    color: #fbe5f5
+}
+
+
+
+
+.input_light div{
+   color: #bcc1f1;
+   margin-bottom: 5px;
+}
+.input_light input{
+    background-color: #292550;
+    border: 5px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color:#bcc1f1
+}
+
+
+.box_navbar {
+    background-color: #010517;
+    padding: 8px 10px 8px 10px;
+    font-size: small;
+}
+
+.navbar_link {
+    text-decoration: none;
+    padding: 2px 10px 5px 10px;
+    color: #b7bffc;
+    border: 1px solid #6173fc;
+    border-radius: 10px;
+    font-size: small;
+}
+
+.navbar_link:hover {
+    background-color: #7585ff;
+    border-radius: 10px;
+    color: #010517;
+}
+
+.navbar_active {
+    background-color: #7585ff;
+    border-radius: 10px;
+    color: #010517;
+    font-size: small;
+}
+
+.navbar_active:hover {
+    background-color: #7585ff;
+    border-radius: 10px;
+    color: white;
+}
+
+.navbar_link_danger {
+    text-decoration: none;
+    padding: 2px 10px 5px 10px;
+    color: #f3c6e7;
+    border: 1px solid #ed9bd7;
+    border-radius: 10px;
+    font-size: small;
+    background-color: #b80a8a;
+}
+
+.navbar_link_danger:hover {
+    background-color: #93066d;
+    border-radius: 10px;
+    color: #fbe5f5;
+}
