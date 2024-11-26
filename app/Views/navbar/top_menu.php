@@ -51,7 +51,7 @@
                 <div class="d-flex gap-1">
                     <?php foreach (menus() as $i) : ?>
 
-                        <a href="<?= base_url($i['controller']); ?>" class="navbar_link <?= (url() == $i['controller'] ? 'navbar_active' : ''); ?>"><i class="<?= $i['icon']; ?>"></i> <?= $i['menu']; ?></a>
+                        <a href="<?= base_url($i['controller']); ?>" class="navbar_link <?= (url() == $i['controller'] ? 'navbar_active' : ''); ?>"><i class="<?= $i['icon']; ?>"></i><?= ($i['menu'] !== 'Home' ? ' ' . upper_first(menu()['url']) . ' ' : ''); ?><?= $i['menu']; ?></a>
                     <?php endforeach; ?>
 
                 </div>
