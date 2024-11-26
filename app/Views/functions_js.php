@@ -314,7 +314,7 @@
 
     const time_php_to_js = (date) => {
         let d = new Date(date * 1000);
-        let res = d.getDate() + '/' + d.getMonth() + '/' + d.getFullYear();
+        let res = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
 
         return res;
     }

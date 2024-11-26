@@ -41,7 +41,7 @@ if (count($angkatan) > 0) {
                 <td><?= ($k + 1); ?></td>
                 <td><?= $i['angkatan']; ?></td>
                 <td><?= $i['mapel']; ?></td>
-                <td><?= $i['jadwal']; ?></td>
+                <td><?= hari(date('l', $i['jadwal']))['indo'] . ', ' . date('d/m/Y', $i['jadwal']); ?></td>
                 <td><a class="link_3 rounded show_materi" data-url="<?= base_url('materi/') . $i['materi']; ?>" href=""><?= $i['materi']; ?></a></td>
                 <td><a class="link_3 rounded detail" data-id="<?= $i['id']; ?>" href=""><i class="fa-regular fa-pen-to-square"></i> Edit</a> <a href="" class="link_danger rounded btn_confirm" data-where="" data-value="" data-alert="" data-url="" data-tabel=""><i class="fa-solid fa-circle-xmark"></i> Delete</a> <a class="link_warning rounded reset_password" data-id="' . $i['id'] . '" href=""><i class="fa-solid fa-repeat"></i> Reset</a></td>
             </tr>
@@ -72,8 +72,8 @@ if (count($angkatan) > 0) {
                                 <input class="search_db search_db_mapel" name="mapel" data-col="mapel" data-db="pembelajaran" data-col_search="value" data-col_show="value" data-tabel="options" data-where="kategori=Mapel" data-order_by="value=ASC" data-limit="" data-col_insert="value" placeholder="Mapel" value="" style="width: 100%;" type="text" readonly>
                             </div>
                             <div class="input_light mb-3">
-                                <div>Hari Pelaksanaan</div>
-                                <input class="search_db search_db_jadwal" placeholder="Jadwal Hari Pelaksanaan" name="jadwal" value="" data-col="jadwal" data-db="pembelajaran" data-col_search="value" data-col_show="value" data-tabel="options" data-where="kategori=Hari" data-order_by="id=ASC" data-limit="" data-col_insert="value" style="width: 100%;" type="text" readonly>
+                                <div>Jadwal</div>
+                                <input placeholder="Tanggal pelaksanaan" name="jadwal" value="<?= date('Y-m-d'); ?>" style="width: 100%;" type="date">
                             </div>
                             <div class="input_light mb-3">
                                 <div>Materi (*Harus PDF dan max 5MB)</div>
@@ -234,7 +234,6 @@ if (count($angkatan) > 0) {
         e.preventDefault();
 
         let id = $(this).data('id');
-
         let datas = <?= json_encode($data); ?>;
 
         let data;
@@ -243,6 +242,7 @@ if (count($angkatan) > 0) {
                 data = e;
             }
         });
+
         let html = '';
         html += '<div class="modal-body bg_3 rounded" style="padding: 1px;">';
         html += '<div class="bg_2 rounded p-0">';
@@ -264,8 +264,8 @@ if (count($angkatan) > 0) {
         html += '<input class="search_db search_db_mapel" name="mapel" data-col="mapel" data-db="pembelajaran" data-col_search="value" data-col_show="value" data-tabel="options" data-where="kategori=Mapel" data-order_by="value=ASC" data-limit="" data-col_insert="value" placeholder="Mapel" value="' + data.mapel + '" style="width: 100%;" type="text" readonly>';
         html += '</div>';
         html += '<div class="input_light mb-3">';
-        html += '<div>Hari Pelaksanaan</div>';
-        html += '<input class="search_db search_db_jadwal" placeholder="Jadwal Hari Pelaksanaan" name="jadwal" value="' + data.jadwal + '" data-col="jadwal" data-db="pembelajaran" data-col_search="value" data-col_show="value" data-tabel="options" data-where="kategori=Hari" data-order_by="id=ASC" data-limit="" data-col_insert="value" style="width: 100%;" type="text" readonly>';
+        html += '<div>Jadwal</div>';
+        html += '<input placeholder="Tanggal pelaksanaan" name="jadwal" value="' + time_php_to_js(data.jadwal) + '" style="width: 100%;" type="date">';
         html += '</div>';
         html += '<div class="input_light mb-3">';
         html += '<div>Materi (*Harus PDF dan max 5MB)</div>';
