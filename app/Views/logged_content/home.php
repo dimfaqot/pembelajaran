@@ -92,7 +92,7 @@
         <div><b class="text_danger_light"><?= hari(date('l', $q['jadwal']))['indo']; ?>, <?= date('d/m/Y', $q['jadwal']); ?></b> <?= $q['mapel']; ?> Kelas <?= $q['angkatan']; ?></div>
 
         <div style="text-align:center">
-            <iframe src="https://docs.google.com/viewer?url=<?= $q['materi']; ?>&embedded=true" frameborder="0" height="500px" width="100%"></iframe>
+            <iframe src="https://docs.google.com/viewer?url=<?= base_url('materi/') . $q['materi']; ?>&embedded=true" frameborder="0" height="500px" width="100%"></iframe>
         </div>
     <?php endif; ?>
 <?php endif; ?>
