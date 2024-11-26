@@ -3,6 +3,7 @@
 <?= $this->section('content') ?>
 
 <?php if (session('role') == 'Root' || session('role') == 'Admin'): ?>
+
     <?php
     $db = db('materi');
     $val = $db->get()->getResultArray();
@@ -55,7 +56,11 @@
         $(document).on('click', '.show_materi', function(e) {
             e.preventDefault();
             let url = $(this).data('url');
-            let html = '<iframe src="http://docs.google.com/gview?url=' + url + '&embedded=true" style="width:100%; height:700px;" frameborder="0"></iframe>';
+            let html = '';
+            html += '<div style="text-align:center">';
+            html += '<iframe src="https://docs.google.com/viewer?url=' + url + '&embedded=true" frameborder="0" height="700px" width="100%"></iframe>';
+            html += '</div>';
+
             $('.modal_body_show_materi').html(html);
 
             let myModal = document.getElementById('show_materi');
@@ -77,12 +82,18 @@
         }
     }
     ?>
+
+
+
     <?php if (!$q): ?>
         <div class="text_danger_light">HARI INI TIDAK ADA MATERI!.</div>
 
     <?php else: ?>
         <div><b class="text_danger_light"><?= hari(date('l', $q['jadwal']))['indo']; ?>, <?= date('d/m/Y', $q['jadwal']); ?></b> <?= $q['mapel']; ?> Kelas <?= $q['angkatan']; ?></div>
-        <iframe src="http://docs.google.com/gview?url=<?= base_url('materi/'); ?><?= $q['materi']; ?>&embedded=true" style="width:100%; height:700px;" frameborder="0"></iframe>
+
+        <div style="text-align:center">
+            <iframe src="https://docs.google.com/viewer?url=<?= $q['materi']; ?>&embedded=true" frameborder="0" height="500px" width="100%"></iframe>
+        </div>
     <?php endif; ?>
 <?php endif; ?>
 
