@@ -108,7 +108,7 @@ if (count($angkatan) > 0) {
         </div>
     </div>
 </div>
-<!-- modal search_db-->
+<!-- modal show_materi-->
 <div class="modal fade" id="show_materi" tabindex="-1">
     <div class="modal-dialog modal-xl">
         <div class="modal-content modal_body_show_materi">
