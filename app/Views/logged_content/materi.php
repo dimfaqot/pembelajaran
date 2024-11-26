@@ -122,7 +122,7 @@ if (count($angkatan) > 0) {
         e.preventDefault();
 
         let url = $(this).data('url');
-        let html = '<object class="pdf" data="' + url + '" width="100%" height="700"></object>';
+        let html = '<iframe src="http://docs.google.com/gview?url=' + url + '&embedded=true" style="width:100%; height:700px;" frameborder="0"></iframe>';
         $('.modal_body_show_materi').html(html);
 
         let myModal = document.getElementById('show_materi');

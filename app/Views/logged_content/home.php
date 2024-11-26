@@ -54,9 +54,8 @@
     <script>
         $(document).on('click', '.show_materi', function(e) {
             e.preventDefault();
-
             let url = $(this).data('url');
-            let html = '<object class="pdf" data="' + url + '" width="100%" height="700"></object>';
+            let html = '<iframe src="http://docs.google.com/gview?url=' + url + '&embedded=true" style="width:100%; height:700px;" frameborder="0"></iframe>';
             $('.modal_body_show_materi').html(html);
 
             let myModal = document.getElementById('show_materi');
@@ -83,7 +82,7 @@
 
     <?php else: ?>
         <div><b class="text_danger_light"><?= hari(date('l', $q['jadwal']))['indo']; ?>, <?= date('d/m/Y', $q['jadwal']); ?></b> <?= $q['mapel']; ?> Kelas <?= $q['angkatan']; ?></div>
-        <object data="<?= base_url('materi/'); ?><?= $q['materi']; ?>" width="100%" height="700"></object>
+        <iframe src="http://docs.google.com/gview?url=<?= base_url('materi/'); ?><?= $q['materi']; ?>&embedded=true" style="width:100%; height:700px;" frameborder="0"></iframe>
     <?php endif; ?>
 <?php endif; ?>
 
