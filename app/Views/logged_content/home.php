@@ -35,7 +35,7 @@
                     <td><?= $i['sub']; ?></td>
                     <td><?= $i['angkatan']; ?></td>
                     <td><?= $i['mapel']; ?></td>
-                    <td><a class="link_3 rounded show_materi" data-url="<?= base_url('materi/') . $i['materi']; ?>" href=""><i class="fa-solid fa-up-right-from-square"></i> Show</a></td>
+                    <td><a target="_blank" class="link_warning rounded" href="<?= base_url('materi/') . $i['materi']; ?>"><i class="fa-regular fa-file-pdf"></i> Open</a> <a class="link_3 rounded show_materi" data-url="<?= base_url('materi/') . $i['materi']; ?>" href=""><i class="fa-solid fa-up-right-from-square"></i> Show</a></td>
                 </tr>
 
             <?php endforeach; ?>
@@ -89,7 +89,7 @@
         <div class="text_danger_light">HARI INI TIDAK ADA MATERI!.</div>
 
     <?php else: ?>
-        <div><b class="text_danger_light"><?= hari(date('l', $q['jadwal']))['indo']; ?>, <?= date('d/m/Y', $q['jadwal']); ?></b> <?= $q['mapel']; ?> Kelas <?= $q['angkatan']; ?></div>
+        <div><b class="text_danger_light"><?= hari(date('l', $q['jadwal']))['indo']; ?>, <?= date('d/m/Y', $q['jadwal']); ?></b> <?= $q['mapel']; ?> Kelas <?= $q['angkatan']; ?> <a target="_blank" class="link_warning rounded" href="<?= base_url('materi/') . $q['materi']; ?>"><i class="fa-regular fa-file-pdf"></i> Open</a></div>
 
         <div style="text-align:center">
             <iframe src="https://docs.google.com/viewer?url=<?= base_url('materi/') . $q['materi']; ?>&embedded=true" frameborder="0" height="500px" width="100%"></iframe>

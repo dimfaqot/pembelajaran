@@ -43,7 +43,7 @@ if (count($angkatan) > 0) {
                 <td><?= $i['mapel']; ?></td>
                 <td><?= hari(date('l', $i['jadwal']))['indo'] . ', ' . date('d/m/Y', $i['jadwal']); ?></td>
                 <td><a class="link_3 rounded show_materi" data-url="<?= base_url('materi/') . $i['materi']; ?>" href=""><?= $i['materi']; ?></a></td>
-                <td><a class="link_3 rounded detail" data-id="<?= $i['id']; ?>" href=""><i class="fa-regular fa-pen-to-square"></i> Edit</a> <a href="" class="link_danger rounded btn_confirm" data-where="" data-value="" data-alert="" data-url="" data-tabel=""><i class="fa-solid fa-circle-xmark"></i> Delete</a> <a class="link_warning rounded reset_password" data-id="' . $i['id'] . '" href=""><i class="fa-solid fa-repeat"></i> Reset</a></td>
+                <td><a href="" class="link_danger rounded btn_confirm" data-where="" data-value="" data-alert="" data-url="" data-tabel=""><i class="fa-solid fa-circle-xmark"></i> Delete</a> <a class="link_3 rounded detail" data-id="<?= $i['id']; ?>" href=""><i class="fa-regular fa-pen-to-square"></i> Edit</a> <a target="_blank" class="link_warning rounded" href="<?= base_url('materi/') . $i['materi']; ?>"><i class="fa-regular fa-file-pdf"></i> Open</a></td>
             </tr>
         <?php endforeach; ?>
     </tbody>
