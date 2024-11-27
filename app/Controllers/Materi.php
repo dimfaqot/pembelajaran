@@ -18,7 +18,7 @@ class Materi extends BaseController
     {
         $sub = clear($this->request->getVar('sub'));
         $angkatan = clear($this->request->getVar('angkatan'));
-        $jadwal = clear($this->request->getVar('jadwal'));
+        $jadwal = strtotime($this->request->getVar('jadwal'));
         $mapel = clear($this->request->getVar('mapel'));
 
 
@@ -75,7 +75,7 @@ class Materi extends BaseController
         $id = clear($this->request->getVar('id'));
         $sub = clear($this->request->getVar('sub'));
         $angkatan = clear($this->request->getVar('angkatan'));
-        $jadwal = clear($this->request->getVar('jadwal'));
+        $jadwal = strtotime($this->request->getVar('jadwal'));
         $mapel = clear($this->request->getVar('mapel'));
 
         $url = base_url('materi/') . $sub;
