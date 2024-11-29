@@ -44,7 +44,7 @@ $delete = ['where' => 'id', 'tabel' => menu()['tabel'], 'alert' => 'Yakin hapus 
 <h1>Siswa <?= menu()['menu']; ?></h1>
 <button class="btn_3 mb-2 rounded data_modal"><i class="fa-solid fa-circle-plus"></i> Add Siswa Sub <?= url(4); ?></button>
 <button class="btn_5 mb-2 rounded" data-bs-toggle="modal" data-bs-target="#link_jwt"><i class="fa-solid fa-link"></i> Link Login Siswa <?= menu()['menu']; ?></button>
-<?= view('template/read_tabel_db', ['col' => 'nama', 'sort' => 'ASC', 'cols' => ['nama', 'kelas', 'wali_kelas'], 'not_input' => $not_input, 'delete' => $delete, 'data' => $data]); ?>
+<?= view('template/read_tabel_db', ['col' => 'nama', 'sort' => 'ASC', 'cols' => ['nama', 'kelas'], 'not_input' => $not_input, 'delete' => $delete, 'data' => $data]); ?>
 
 
 <!-- modal link jwt-->
